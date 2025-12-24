@@ -1,59 +1,115 @@
 <header>
 
-<!--
-  <<< Author notes: Course header >>>
-  Include a 1280×640 image, course title in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Add your open source license, GitHub uses MIT license.
--->
+# JNJ Creative Arts LLC
 
-# GitHub Pages
+Welcome to **JNJ Creative Arts LLC** - where music meets technology! We create innovative educational content that bridges the worlds of music, data science, machine learning, and artificial intelligence.
 
-_Create a site or blog from your GitHub repositories with GitHub Pages._
+## About Us
 
-</header>
+JNJ Creative Arts LLC specializes in making technical concepts accessible and engaging through the universal language of music. We believe that learning should be creative, intuitive, and fun.
 
-<!--
-  <<< Author notes: Step 2 >>>
-  Start this step by acknowledging the previous step.
-  Define terms and link to docs.github.com.
-  Historic note: previous version checked for empty pull request, changed to the correct theme `minima`.
--->
+## Our Mission
 
-## Step 2: Configure your site
-
-_You turned on GitHub Pages! :tada:_
-
-We'll work in a branch, `my-pages`, that I created for you to get this site looking great. :sparkle:
-
-Jekyll uses a file titled `_config.yml` to store settings for your site, your theme, and reusable content like your site title and GitHub handle. You can check out the `_config.yml` file on the **Code** tab of your repository.
-
-We need to use a blog-ready theme. For this activity, we will use a theme named "minima".
-
-### :keyboard: Activity: Configure your site
-
-1. Browse to the `_config.yml` file in the `my-pages` branch.
-1. In the upper right corner, open the file editor.
-1. Add a `theme:` set to **minima** so it shows in the `_config.yml` file as below:
-   ```yml
-   theme: minima
-   ```
-1. (optional) You can modify the other configuration variables such as `title:`, `author:`, and `description:` to further customize your site.
-1. Commit your changes.
-1. (optional) Create a pull request to view all the changes you'll make throughout this course. Click the **Pull Requests** tab, click **New pull request**, set `base: main` and `compare:my-pages`.
-1. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
-
-<footer>
-
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
+To empower learners by connecting the art of music with the science of technology, making data structures, algorithms, and AI concepts approachable for everyone.
 
 ---
 
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/github-pages) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
+## Featured Project: Learning DSA with Music
 
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+### Overview
+
+**Learning DSA with Music** is an educational platform that teaches Data Structures and Algorithms (DSA) through music concepts. By drawing parallels between musical patterns and computational thinking, we make complex CS topics more intuitive and memorable.
+
+### Who Is This For?
+
+- 🎵 **Beginners** starting their coding journey
+- 🎓 **Students** learning data structures and algorithms
+- 🎹 **Music enthusiasts** curious about programming
+- 👨‍💻 **Developers** looking for creative approaches to understanding DSA
+
+### What You'll Find
+
+- **Code Examples**: Python implementations of DSA concepts using musical analogies
+- **Tutorials**: Step-by-step guides connecting music theory to algorithms
+- **Interactive Learning**: Hands-on exercises that make learning engaging
+
+### Topics Covered
+
+- Arrays & Lists ↔ Musical Scales & Sequences
+- Stacks & Queues ↔ Musical Notation & Playback
+- Trees ↔ Chord Progressions & Harmonic Structure
+- Graphs ↔ Music Theory Relationships
+- Sorting Algorithms ↔ Organizing Musical Elements
+- Recursion ↔ Musical Patterns & Repetition
+
+### Technologies
+
+- **Language**: Python 3.x
+- **Libraries**: NumPy, pandas, music21 (and more)
+
+### Getting Started
+```bash
+# Clone the repository
+git clone https://github.com/JamiNishelle/LearningDSAwithMusic.git
+
+# Navigate to the project directory
+cd LearningDSAwithMusic
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Start exploring!
+```
+
+### Project Structure
+```
+LearningDSAwithMusic/
+├── tutorials/          # Step-by-step learning guides
+├── examples/           # Code examples with music analogies
+├── exercises/          # Practice problems
+└── resources/          # Additional learning materials
+```
+
+## Connect With Us
+
+- **Website**: [Coming Soon]
+- **Email**: [Your Email]
+- **GitHub**: [@JamiNishelle](https://github.com/JamiNishelle)
+
+## Contributing
+
+We welcome contributions! If you have ideas for new music-tech connections or want to improve existing content, please feel free to:
+
+1. Fork the repository
+2. Create a feature branch
+3. Submit a pull request
+
+## License
+
+MIT License
+
+Copyright (c) 2024 JNJ Creative Arts LLC
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+© 2024 JNJ Creative Arts LLC. Making technology sing! 🎶💻
 
 </footer>
