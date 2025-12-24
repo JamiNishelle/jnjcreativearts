@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JNJ Creative Arts LLC | Where Music Meets Technology</title>
+    <meta name="description" content="JNJ Creative Arts LLC creates innovative educational content bridging music, data science, machine learning, and AI.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --secondary: #ec4899;
+            --accent: #8b5cf6;
+            --dark: #1e1b4b;
+            --light: #f8fafc;
+            --text: #334155;
+            --text-light: #64748b;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--light);
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 50%, var(--secondary) 100%);
+            color: white;
+            padding: 8rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '♪';
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.05;
+            top: -2rem;
+            right: 10%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '</>';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.05;
+            bottom: -2rem;
+            left: 10%;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .hero .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.25rem;
+            color: var(--text-light);
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+            transition: all 0.3s;
+            border: 1px solid #e2e8f0;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Feature Grid */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin: 4rem 0;
+        }
+
+        .feature-content h3 {
+            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .feature-list li {
+            padding: 1rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text);
+            font-size: 1.1rem;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .feature-image {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 16px;
+            padding: 3rem;
+            text-align: center;
+            color: white;
+            font-size: 4rem;
+        }
+
+        /* Topics Section */
+        .topics {
+            background: white;
+        }
+
+        .topic-item {
+            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .topic-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+        }
+
+        .topic-icon {
+            font-size: 2rem;
+            min-width: 3rem;
+        }
+
+        .topic-content {
+            flex: 1;
+        }
+
+        .topic-content h4 {
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .topic-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Code Block */
+        .code-section {
+            background: var(--dark);
+            color: #e2e8f0;
+            padding: 4rem 0;
+        }
+
+        .code-block {
+            background: #0f172a;
+            border-radius: 12px;
+            padding: 2rem;
+            overflow-x: auto;
+            border: 1px solid #334155;
+        }
+
+        .code-block code {
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .code-comment {
+            color: #64748b;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .contact-item a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: var(--secondary);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        footer a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.25rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            section {
+                padding: 3rem 0;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">JNJ Creative Arts LLC</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#topics">Topics</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="fade-in-up">Where Music Meets Technology</h1>
+            <p class="tagline fade-in-up">Innovative educational content bridging music, data science, machine learning, and AI</p>
+            <p class="fade-in-up">We believe that learning should be creative, intuitive, and fun. Join us on a journey where algorithms dance to the rhythm of music.</p>
+            <div class="cta-buttons fade-in-up">
+                <a href="https://github.com/JamiNishelle/LearningDSAwithMusic" class="btn btn-primary">Explore Our Project</a>
+                <a href="#about" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About JNJ Creative Arts LLC</h2>
+                <p>Making technical concepts accessible through the universal language of music</p>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <span class="card-icon">🎵</span>
+                    <h3>Music Education</h3>
+                    <p>Leveraging music theory and patterns to make complex concepts intuitive and memorable for learners of all backgrounds.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">💻</span>
+                    <h3>Tech Innovation</h3>
+                    <p>Cutting-edge approaches to teaching data structures, algorithms, machine learning, and artificial intelligence.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🎓</span>
+                    <h3>Student-Centered</h3>
+                    <p>Designed for beginners, students, and enthusiasts who want to learn coding through creative and engaging methods.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section style="background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);">
+        <div class="container">
+            <div class="feature-grid">
+                <div class="feature-content">
+                    <h3>Our Mission</h3>
+                    <p style="font-size: 1.25rem; color: var(--text); margin-bottom: 2rem;">
+                        To empower learners by connecting the art of music with the science of technology, making data structures, algorithms, and AI concepts approachable for everyone.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Bridge the gap between creative and technical thinking</li>
+                        <li>Make computer science accessible to music enthusiasts</li>
+                        <li>Create memorable learning experiences through analogies</li>
+                        <li>Build a community of creative technologists</li>
+                    </ul>
+                </div>
+                <div class="feature-image">
+                    🎹💡
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Project Section -->
+    <section id="project">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Project: Learning DSA with Music</h2>
+                <p>Teaching Data Structures & Algorithms through musical concepts and patterns</p>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <span class="card-icon">📚</span>
+                    <h3>Code Examples</h3>
+                    <p>Python implementations of DSA concepts using musical analogies that make abstract ideas concrete and relatable.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">📖</span>
+                    <h3>Tutorials</h3>
+                    <p>Step-by-step guides connecting music theory to algorithms, with practical exercises and real-world applications.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🎮</span>
+                    <h3>Interactive Learning</h3>
+                    <p>Hands-on exercises that make learning engaging and help reinforce concepts through practice and experimentation.</p>
+                </div>
+            </div>
+
+            <div class="feature-grid" style="margin-top: 5rem;">
+                <div class="feature-image">
+                    🎸🔍
+                </div>
+                <div class="feature-content">
+                    <h3>Who Is This For?</h3>
+                    <ul class="feature-list">
+                        <li><strong>Beginners</strong> starting their coding journey with no prior experience</li>
+                        <li><strong>Students</strong> learning data structures and algorithms in school</li>
+                        <li><strong>Music Enthusiasts</strong> curious about programming and technology</li>
+                        <li><strong>Developers</strong> looking for creative approaches to understanding DSA</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics Section -->
+    <section id="topics" class="topics">
+        <div class="container">
+            <div class="section-header">
+                <h2>Topics We Cover</h2>
+                <p>Discover the beautiful parallels between music and computer science</p>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="topic-item">
+                    <span class="topic-icon">🎼</span>
+                    <div class="topic-content">
+                        <h4>Arrays & Lists ↔ Musical Scales & Sequences</h4>
+                        <p>Learn how arrays work like musical scales, with ordered elements that create patterns</p>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <span class="topic-icon">📝</span>
+                    <div class="topic-content">
+                        <h4>Stacks & Queues ↔ Musical Notation & Playback</h4>
+                        <p>Understand data structures through the lens of how music is written and performed</p>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <span class="topic-icon">🌲</span>
+                    <div class="topic-content">
+                        <h4>Trees ↔ Chord Progressions & Harmonic Structure</h4>
+                        <p>See how tree structures mirror the hierarchical nature of musical harmony</p>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <span class="topic-icon">🕸️</span>
+                    <div class="topic-content">
+                        <h4>Graphs ↔ Music Theory Relationships</h4>
+                        <p>Explore connections between notes and chords using graph theory</p>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <span class="topic-icon">🔄</span>
+                    <div class="topic-content">
+                        <h4>Sorting Algorithms ↔ Organizing Musical Elements</h4>
+                        <p>Learn sorting through arranging notes, rhythms, and musical phrases</p>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <span class="topic-icon">🔁</span>
+                    <div class="topic-content">
+                        <h4>Recursion ↔ Musical Patterns & Repetition</h4>
+                        <p>Understand recursion through repeated musical motifs and variations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Section -->
+    <section class="code-section">
+        <div class="container">
+            <div class="section-header" style="color: white;">
+                <h2>Get Started</h2>
+                <p style="color: #cbd5e1;">Clone the repository and start learning today</p>
+            </div>
+
+            <div class="code-block">
+                <code>
+<span class="code-comment"># Clone the repository</span><br>
+git clone https://github.com/JamiNishelle/LearningDSAwithMusic.git<br><br>
+<span class="code-comment"># Navigate to the project directory</span><br>
+cd LearningDSAwithMusic<br><br>
+<span class="code-comment"># Install dependencies</span><br>
+pip install -r requirements.txt<br><br>
+<span class="code-comment"># Start exploring!</span><br>
+python examples/musical_arrays.py
+                </code>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://github.com/JamiNishelle/LearningDSAwithMusic" class="btn btn-primary">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Built with Python</h2>
+            <p style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 2rem;">Using industry-standard libraries and tools</p>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>🐍</h3>
+                    <p>Python 3.x</p>
+                </div>
+                <div class="stat-item">
+                    <h3>📊</h3>
+                    <p>NumPy & Pandas</p>
+                </div>
+                <div class="stat-item">
+                    <h3>🎵</h3>
+                    <p>music21</p>
+                </div>
+                <div class="stat-item">
+                    <h3>🚀</h3>
+                    <p>Open Source</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Connect With Us</h2>
+                <p>Let's create something amazing together</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <span class="contact-icon">🌐</span>
+                    <p><strong>Website</strong></p>
+                    <a href="https://www.jaminishelle.com" target="_blank">www.jaminishelle.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <p><strong>Email</strong></p>
+                    <a href="mailto:jami@jaminishelle.com">jami@jaminishelle.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">💻</span>
+                    <p><strong>GitHub</strong></p>
+                    <a href="https://github.com/JamiNishelle" target="_blank">@JamiNishelle</a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 4rem; padding: 3rem; background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%); border-radius: 16px;">
+                <h3 style="font-size: 2rem; margin-bottom: 1rem; color: var(--dark);">Want to Contribute?</h3>
+                <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 2rem;">We welcome contributions! If you have ideas for new music-tech connections or want to improve existing content, we'd love to hear from you.</p>
+                <a href="https://github.com/JamiNishelle/LearningDSAwithMusic" class="btn btn-primary">Contribute on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p style="font-size: 1.5rem; margin-bottom: 1rem;">🎶💻</p>
+            <p style="margin-bottom: 1rem;"><strong>© 2024 JNJ Creative Arts LLC. Making technology sing!</strong></p>
+            <p style="font-size: 0.9rem;">Licensed under the <a href="https://github.com/JamiNishelle/LearningDSAwithMusic/blob/main/LICENSE">MIT License</a></p>
+            <p style="font-size: 0.9rem; margin-top: 1rem;">
+                This site is open source. 
+                <a href="https://github.com/JamiNishelle/jnjcreativearts">Improve this page</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
