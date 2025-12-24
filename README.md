@@ -72,8 +72,8 @@ LearningDSAwithMusic/
 
 ## Connect With Us
 
-- **Website**: [Coming Soon]
-- **Email**: [Your Email]
+- **Website**: www.jaminishelle.com
+- **Email**: jami@jaminishelle.com
 - **GitHub**: [@JamiNishelle](https://github.com/JamiNishelle)
 
 ## Contributing
